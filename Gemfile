@@ -3,6 +3,25 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.0"
 
+# All runtime config comes from the UNIX environment
+# but we use dotenv to store that in files for
+# development and testing
+gem "dotenv-rails", groups: [:development, :test]
+
+# Brakeman analyzes our code for security vulnerabilities
+gem "brakeman"
+
+# bundler-audit checks our dependencies for vulnerabilities
+gem "bundler-audit"
+
+# lograge changes Rails' logging to a more
+# traditional one-line-per-event format
+gem "lograge"
+
+# Ruby < 3.0 included rexml by default, but now
+# it's a separate gem that is required for running tests
+gem "rexml"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 

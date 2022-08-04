@@ -1,0 +1,11 @@
+{
+  "ruby.rubocop.executePath": "/home/jensjap/.rbenv/shims/",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Set the default
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {},
+  "prettier.singleQuote": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  }
+}
